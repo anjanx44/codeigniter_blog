@@ -48,7 +48,7 @@
                             <select name="publication_status">
                                 <option>select publication status</option>
                                 <option value="1">Publish</option>
-                                <option value="1">Unpublish</option>
+                                <option value="0">Unpublish</option>
                             </select>
                         </div>
 

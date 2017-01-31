@@ -1,6 +1,6 @@
 <section class="content-header">
     <h1>
-        Data Tables
+        Manage Category
         <small>advanced tables</small>
     </h1>
     <ol class="breadcrumb">
@@ -60,21 +60,31 @@
                                         if ($v_category->publication_status == 0) {
                                             ?>
 
-                                        <a class="btn btn-success" href="<?php echo site_url();?>super_admin/published_category/<?php echo $v_category->category_id;?>" title="Publish">
+                                            <a class="btn btn-success" href="<?php echo site_url(); ?>super_admin/published_category/<?php echo $v_category->category_id; ?>" title="Publish">
                                                 <i class="fa fa-toggle-up"></i>
                                             </a>
+
 
                                             <?php
                                         } else {
                                             ?>
 
-                                        <a class="btn btn-danger" href="<?php echo site_url();?>super_admin/unpublished_category/<?php echo $v_category->category_id;?>" title="Unpublish">
+                                            <a class="btn btn-danger" href="<?php echo site_url(); ?>super_admin/unpublished_category/<?php echo $v_category->category_id; ?>" title="Unpublish">
                                                 <i class="fa fa-toggle-down"></i>
                                             </a>
 
                                             <?php
                                         }
                                         ?>
+
+                                        <a class="btn btn-success" href="<?php echo site_url(); ?>super_admin/edit_category/<?php echo $v_category->category_id; ?>" title="Edit">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="btn btn-danger" href="<?php echo site_url(); ?>super_admin/delete_category/<?php echo $v_category->category_id; ?>" title="Delete" onclick="return delete_category();">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </a>
+
+
 
                                     </td>
 

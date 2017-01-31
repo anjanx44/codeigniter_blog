@@ -36,6 +36,22 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        <script>
+            function delete_category()
+            {
+                var chk = confirm("Are you sure to delete this ?");
+                if(chk){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        </script>
+        
+        
+        
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">

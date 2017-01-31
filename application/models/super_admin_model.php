@@ -28,4 +28,29 @@ class Super_Admin_Model extends CI_Model{
          $this->db->update('tbl_category');
          
     }
+    
+    
+    
+    public function delete_category_by_id($category_id){
+        $this->db->where('category_id',$category_id);
+        $this->db->delete('tbl_category');
+        
+    }
+    
+    public function select_category_by_id($category_id){
+        $this->db->select('*');
+         $this->db->from('tbl_category');
+         $this->db->where('category_id',$category_id);
+         $query_result =$this->db->get();
+         $result=$query_result->row();
+         return $result;  
+    } 
+    
+    public function update_category_info($data,$category_id){
+        
+        $this->db->where('category_id',$category_id);
+        $this->db->update('tbl_category',$data);
+    }
+    
+    
 }
